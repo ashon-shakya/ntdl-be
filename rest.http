@@ -1,0 +1,49 @@
+// tasks API
+// CREATE USER
+@rooturl = http://localhost:5000/api/v1
+@taskEP = {{rooturl}}/tasks
+
+POST {{taskEP}}
+Content-Type: application/json
+
+{
+    "task": "cleaning the room",
+    "hr" : 10,
+    "type" : "entry"
+}
+
+
+###
+// READING Task
+GET {{taskEP}}
+
+###
+
+// READING USER
+GET {{taskEP}}/1
+
+###
+
+// UPDATE USER
+PUT {{taskEP}}/67847f3c731e0fc64dbe547sdfs3
+Content-Type: application/json
+
+{
+    "task": "very boring task",
+    "hr" : 200,
+    "type" : "bad"
+}
+###
+
+// UPDATE USER
+PATCH {{taskEP}}/67847f3c731e0fc64dbe547sdfs3
+Content-Type: application/json
+
+{
+    "type": "bad"
+}
+
+
+###
+// DELETING USER
+DELETE {{taskEP}}/67847f3c731e0fc64dbe547sdfs3
