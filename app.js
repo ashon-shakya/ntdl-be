@@ -33,6 +33,8 @@ app.use(express.json());
 
 // endpoint : localhost:5000/api/v1/tasks
 
+app.get("/", (req,res)=>{ res.send("NTDL BE API")});
+
 // CRUD
 // CREATE a task
 // POST
